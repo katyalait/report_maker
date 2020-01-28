@@ -1,11 +1,22 @@
 {% extends "base.html" %}
-
 {% block content %}
-<h5> Home </h5>
-{% if rows %}
-  <ul>
-  {% for row in rows %}
-    <li> {{ row }} </li>
-  {% endfor %}
-{% endif %}
+  <h3>Choose File</h3>
+  {% if rows %}
+  <table class="table table-striped">
+    <thead>
+      <th scope="col">Org Name</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{row.1}}</td>
+        <td><a href="/report/xml/{{row.0}}">XML</a></td>
+        <td><a href="/report/pdf/{{row.0}}">PDF</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
 {% endblock %}

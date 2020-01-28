@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<root>
+	<organization type="str">MOM Corp.</organization>
+	<reported_at type="str">3015-08-24</reported_at>
+	<created_at type="str">3015-08-23</created_at>
+	<inventory type="list">
+		<item type="dict">
+			<name type="str">bending unit</name>
+			<price type="str">2000.00</price>
+		</item>
+		<item type="dict">
+			<name type="str">stapling unit</name>
+			<price type="str">50.00</price>
+		</item>
+	</inventory>
+</root>
