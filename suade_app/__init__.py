@@ -1,5 +1,4 @@
 from flask import Flask
-from suade_app.config import Config
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2 as pg
 
@@ -9,7 +8,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 
 app = Flask(__name__)
-app.config.from_object(Config)
 
 DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user="interview",pw="uo4uu3AeF3",url="candidate.suade.org", db="suade")
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
