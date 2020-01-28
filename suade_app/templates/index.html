@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h5> Home </h5>
+{% if rows %}
+  <ul>
+  {% for row in rows %}
+    <li> {{ row }} </li>
+  {% endfor %}
+{% endif %}
+{% endblock %}

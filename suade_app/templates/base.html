@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Report Maker</title>
+      {% else %}
+      <title>Welcome to Report Maker</title>
+      {% endif %}
+    </head>
+    <body>
+      <div>Report Maker: <a href="/index">Home</a></div>
+      <hr>
+      {% block content %}{% endblock %}
+    </body>
+</html>
